@@ -2,6 +2,14 @@
 
 namespace Lab03
 {
+
+    /*
+    * Student ID : 1690704208
+    * Name       : Lab03
+    * Section    : 129D
+    * No.        : 
+    * Course     : GI113 Computer Programming (GI)
+    */
     internal class Program
     {
         static void Main(string[] args)
