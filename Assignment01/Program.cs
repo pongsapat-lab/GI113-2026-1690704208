@@ -16,17 +16,23 @@
 
             Console.WriteLine($"     _-={gameName}=-_    ");
             Console.WriteLine($"    | Character: {char01_name} |");
-            Console.WriteLine($"    | Grade:         {char01_grade} |");
-            Console.WriteLine($"    | Level:         {char01_lvl} |");
-            Console.WriteLine($"    | Attack:     {char01_atk} |");
-            Console.WriteLine($"    | Defence:     {char01_def} |");
-            Console.WriteLine($"    | Playable:   {isPlayerAble} |");
+            Console.WriteLine($"    | Grade:     {char01_grade}     |");
+            Console.WriteLine($"    | Level:     {char01_lvl}     |");
+            Console.WriteLine($"    | Attack:    {char01_atk}  |");
+            Console.WriteLine($"    | Defence:   {char01_def}   |");
+            Console.WriteLine($"    | Playable:  {isPlayerAble}  |");
+            Console.WriteLine("    --------------------");
+            Console.WriteLine();
+            Console.WriteLine();
+
 
             double lvlasDouble = char01_lvl;
             Console.WriteLine($"Level as double (IMPLICIT): {lvlasDouble}");
 
-
-
+            int defTruncated = (int)char01_def;               
+            int defRounded = Convert.ToInt32(char01_def);
+            Console.WriteLine($"Defence cast (TRUNCATES)  : {defTruncated}");
+            Console.WriteLine($"Defence convert (ROUNDS)  : {defRounded}");
         }
     }
 }
