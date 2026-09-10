@@ -14,13 +14,14 @@
             bool isPlayerAble = true;
 
 
-            Console.WriteLine($"");
-            Console.WriteLine($"Character: {char01_name}");
-            Console.WriteLine($"Grade: {char01_grade}");
-            Console.WriteLine($"Level: {char01_lvl}");
-            Console.WriteLine($"Attack: {char01_atk}");
-            Console.WriteLine($"Defence: {char01_def}");
-            Console.WriteLine($"Playable: {isPlayerAble}");
+            Console.WriteLine($"     _-={gameName}=-_    ");
+            Console.WriteLine($"    | Character: {char01_name} |");
+            Console.WriteLine($"    | Grade:         {char01_grade} |");
+            Console.WriteLine($"    | Level:         {char01_lvl} |");
+            Console.WriteLine($"    | Attack:     {char01_atk} |");
+            Console.WriteLine($"    | Defence:     {char01_def} |");
+            Console.WriteLine($"    | Playable:   {isPlayerAble} |");
+
         }
     }
 }
