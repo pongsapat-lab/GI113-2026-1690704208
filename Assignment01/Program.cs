@@ -22,6 +22,11 @@
             Console.WriteLine($"    | Defence:     {char01_def} |");
             Console.WriteLine($"    | Playable:   {isPlayerAble} |");
 
+            double lvlasDouble = char01_lvl;
+            Console.WriteLine($"Level as double (IMPLICIT): {lvlasDouble}");
+
+
+
         }
     }
 }
