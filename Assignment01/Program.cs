@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            const string gameName = "EX3 ShoWDown";
+            const string gameName = " EX3 SHOWDOWN ";
 
             var char01_name = "Faust";
             var char01_grade = "C";
@@ -14,7 +14,7 @@
             bool isPlayerAble = true;
 
 
-            Console.WriteLine($"     _-={gameName}=-_    ");
+            Console.WriteLine($"    _-={gameName}=-_    ");
             Console.WriteLine($"    | Character: {char01_name} |");
             Console.WriteLine($"    | Grade:     {char01_grade}     |");
             Console.WriteLine($"    | Level:     {char01_lvl}     |");
