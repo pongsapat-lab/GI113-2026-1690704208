@@ -13,25 +13,33 @@ namespace Lab05
         static void Main(string[] args)
         {
 
-            Console.WriteLine("=== BATTLE DAMAGE CALCULATOR ===");
-            Console.WriteLine("Hero vs Monster -- scouting the fight before it happens");
+            Console.WriteLine("=== BATTLE ARENA ===");
+            Console.WriteLine("Hero vs Monster -- Fight Damage Calculator");
 
+            //Hero
             Console.Write("Hero HP: ");
-            bool heroHpOk = int.TryParse(Console.ReadLine(), out int heroHp);
+            bool heroHpOk = int.TryParse(Console.ReadLine(), out int heroHp);  //HeEro HP
             Console.Write("Hero Attack: ");
-            bool heroAttackOk = int.TryParse(Console.ReadLine(), out int heroAttack);
+            bool heroAttackOk = int.TryParse(Console.ReadLine(), out int heroAttack);  //Hero Atk
             Console.Write("Hero Defense: ");
-            bool heroDefenseOk = int.TryParse(Console.ReadLine(), out int heroDefense);
-            Console.Write("Monster HP: ");
-            bool monsterHpOk = int.TryParse(Console.ReadLine(), out int monsterHp);
-            Console.Write("Monster Attack: ");
-            bool monsterAttackOk = int.TryParse(Console.ReadLine(), out int monsterAttack);
-            Console.Write("Monster Defense: ");
-            bool monsterDefenseOk = int.TryParse(Console.ReadLine(), out int monsterDefense);
-            bool allStatsValid = heroHpOk && heroAttackOk && heroDefenseOk && monsterHpOk && monsterAttackOk && monsterDefenseOk;
-            Console.WriteLine($"All stats valid: {allStatsValid}");
+            bool heroDefenseOk = int.TryParse(Console.ReadLine(), out int heroDefense); //Hero Def
             Console.WriteLine();
 
+            //Mon
+            Console.Write("Monster HP: ");
+            bool monsterHpOk = int.TryParse(Console.ReadLine(), out int monsterHp); //Mon HP
+            Console.Write("Monster Attack: ");
+            bool monsterAttackOk = int.TryParse(Console.ReadLine(), out int monsterAttack); //Mon Atk
+            Console.Write("Monster Defense: ");
+            bool monsterDefenseOk = int.TryParse(Console.ReadLine(), out int monsterDefense); //Mon Def
+            Console.WriteLine();
+
+            //input validation / output
+            bool heroStatsValid = heroHpOk && heroAttackOk && heroDefenseOk;
+            bool monsterStatsValid = monsterHpOk || monsterAttackOk || monsterDefenseOk;
+            Console.WriteLine($"\nHero stats valid: {heroStatsValid}");
+            Console.WriteLine($"Monster stats valid: {monsterStatsValid}");
+            Console.WriteLine();
 
             int monsterMaxHp = monsterHp;
             Console.WriteLine($"[Hero]    HP:{heroHp} ATK:{heroAttack} DEF:{heroDefense}");
