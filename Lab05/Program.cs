@@ -48,9 +48,11 @@ namespace Lab05
             Console.WriteLine();
 
 
-            // Before scouting: Hero drinks a potion (compound assignment: +=)
+            // Before scouting: Hero drinks a potion (compound assignment: +=) กินยาก่อนสู้
             int potionHeal = 8;
-            heroHp += potionHeal;
+
+            heroHp += potionHeal; //สั้น
+            //herohp = herohp + potionHeal ยาว
             Console.WriteLine($"Hero drinks a potion, healing {potionHeal}. Hero HP is now {heroHp}.");
 
             // Damage preview 1: Normal Attack (arithmetic + Math -- the base pattern)
