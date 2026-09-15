@@ -18,20 +18,20 @@ namespace Lab05
 
             //Hero
             Console.Write("Hero HP: ");
-            bool heroHpOk = int.TryParse(Console.ReadLine(), out int heroHp);  //HeEro HP
+            bool heroHpOk = int.TryParse(Console.ReadLine(), out int heroHp);  //HeEro HP 35 
             Console.Write("Hero Attack: ");
-            bool heroAttackOk = int.TryParse(Console.ReadLine(), out int heroAttack);  //Hero Atk
+            bool heroAttackOk = int.TryParse(Console.ReadLine(), out int heroAttack);  //Hero Atk 14
             Console.Write("Hero Defense: ");
-            bool heroDefenseOk = int.TryParse(Console.ReadLine(), out int heroDefense); //Hero Def
+            bool heroDefenseOk = int.TryParse(Console.ReadLine(), out int heroDefense); //Hero Def 3
             Console.WriteLine();
 
             //Mon
             Console.Write("Monster HP: ");
-            bool monsterHpOk = int.TryParse(Console.ReadLine(), out int monsterHp); //Mon HP
+            bool monsterHpOk = int.TryParse(Console.ReadLine(), out int monsterHp); //Mon HP 45
             Console.Write("Monster Attack: ");
-            bool monsterAttackOk = int.TryParse(Console.ReadLine(), out int monsterAttack); //Mon Atk
+            bool monsterAttackOk = int.TryParse(Console.ReadLine(), out int monsterAttack); //Mon Atk 11
             Console.Write("Monster Defense: ");
-            bool monsterDefenseOk = int.TryParse(Console.ReadLine(), out int monsterDefense); //Mon Def
+            bool monsterDefenseOk = int.TryParse(Console.ReadLine(), out int monsterDefense); //Mon Def 4
             Console.WriteLine();
 
             //input validation / output
