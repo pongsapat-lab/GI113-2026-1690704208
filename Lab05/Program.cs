@@ -54,14 +54,17 @@ namespace Lab05
             heroHp += potionHeal; //สั้น
             //herohp = herohp + potionHeal ยาว
             Console.WriteLine($"Hero drinks a potion, healing {potionHeal}. Hero HP is now {heroHp}.");
+            Console.WriteLine();
 
             // Damage preview 1: Normal Attack (arithmetic + Math -- the base pattern)
             int normalDamage = Math.Max(0, heroAttack - monsterDefense);
             Console.WriteLine($"Normal Attack would deal: {normalDamage} damage");
+            Console.WriteLine();
 
             // Damage preview 2: Power Attack (precedence -- multiply before subtract)
-            int powerDamage = Math.Max(0, heroAttack * 2 - monsterDefense);
+            int powerDamage = Math.Max(0, (heroAttack * 2) - monsterDefense);
             Console.WriteLine($"Power Attack would deal: {powerDamage} damage");
+            Console.WriteLine();
 
             // Damage preview 3: what Monster would deal back, if it got a turn (same pattern, other side)
             int counterDamage = Math.Max(0, monsterAttack - heroDefense);
