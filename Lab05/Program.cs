@@ -66,13 +66,8 @@ namespace Lab05
             Console.WriteLine($"Power Attack would deal: {powerDamage} damage");
             Console.WriteLine();
 
-            //monster hit back
-            int counterDamage = Math.Max(0, monsterAttack - heroDefense);
-            Console.WriteLine($"If Monster counters afterward, it would deal: {counterDamage} damage");
-            Console.WriteLine();
-            Console.WriteLine();
 
-
+            //random crit atk
             Random rng = new Random(14);
             int roll = rng.Next(1, 101);
             bool isCritical = roll <= 10;
