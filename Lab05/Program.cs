@@ -56,17 +56,17 @@ namespace Lab05
             Console.WriteLine($"Hero drinks a potion, healing {potionHeal}. Hero HP is now {heroHp}.");
             Console.WriteLine();
 
-            // Damage preview 1: Normal Attack (arithmetic + Math -- the base pattern)
+            //normal atk
             int normalDamage = Math.Max(0, heroAttack - monsterDefense);
             Console.WriteLine($"Normal Attack would deal: {normalDamage} damage");
             Console.WriteLine();
 
-            // Damage preview 2: Power Attack (precedence -- multiply before subtract)
+            //power atk
             int powerDamage = Math.Max(0, (heroAttack * 2) - monsterDefense);
             Console.WriteLine($"Power Attack would deal: {powerDamage} damage");
             Console.WriteLine();
 
-            // Damage preview 3: what Monster would deal back, if it got a turn (same pattern, other side)
+            //monster hit back
             int counterDamage = Math.Max(0, monsterAttack - heroDefense);
             Console.WriteLine($"If Monster counters afterward, it would deal: {counterDamage} damage");
             Console.WriteLine();
