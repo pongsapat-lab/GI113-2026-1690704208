@@ -75,7 +75,7 @@ namespace Lab06
             //    Console.WriteLine("lived");
             //}
 
-            int pcHp = 100;
+            int pcHp = 50;
             int targetHp = 20;
             int attack = 10;
             int defence = 10;
