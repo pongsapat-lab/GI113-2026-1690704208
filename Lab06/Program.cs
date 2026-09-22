@@ -14,18 +14,31 @@ namespace Lab06
         {
             int lives = 5;
 
-            // call "if" to check
-            if (lives <= 0) //เงื่อนไขที่เป็น bool
+            //// call "if" to check
+            //if (lives <= 0) //เงื่อนไขที่เป็น bool
+            //{
+            //    Console.WriteLine("game over"); //ในปีกกาคือ code ที่จะรันเมื่อมัน true
+            //}
+            //else
+            //{
+            //    Console.WriteLine("pass");
+            //}
+
+            ////code บรรทัดต่อมาจะทำงานเมื่อ :if" เสร็จหรือ false
+            //Console.WriteLine("continue code");
+
+
+            int level = 7;
+
+            if (level >=5)
             {
-                Console.WriteLine("game over"); //ในปีกกาคือ code ที่จะรันเมื่อมัน true
+                Console.WriteLine("door opne");
             }
             else
             {
-                Console.WriteLine("pass");
+                Console.WriteLine("door stay shut");
             }
 
-            //code บรรทัดต่อมาจะทำงานเมื่อ :if" เสร็จหรือ false
-            Console.WriteLine("continue code");
         }
     }
 }
