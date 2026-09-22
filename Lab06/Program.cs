@@ -12,7 +12,7 @@ namespace Lab06
     {
         static void Main(string[] args)
         {
-            int lives = 5;
+            //int lives = 5;
 
             //// call "if" to check
             //if (lives <= 0) //เงื่อนไขที่เป็น bool
