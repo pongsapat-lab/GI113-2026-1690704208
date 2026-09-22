@@ -12,7 +12,15 @@ namespace Lab06
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int lives = 8;
+
+            // call "if" to check
+            if (lives == 0) //เงื่อนไขที่เป็น bool
+            {
+                Console.WriteLine("game over"); //ในปีกกาคือ code ที่จะรันเมื่อมัน true
+            }
+
+            //code บรรทัดต่อมาจะทำงานเมื่อ if เสร็จหรือ false
         }
     }
 }
