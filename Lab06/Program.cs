@@ -30,31 +30,41 @@ namespace Lab06
             //Console.WriteLine("continue code");
 
 
-            int level = 11;
+            //int level = 11;
 
-            if (level >= 10)
+            Console.WriteLine("your level (1-99): ");
+            bool inputLevel = int.TryParse(Console.ReadLine(), out int level);
+
+            if (!inputLevel || level < 1 || level > 99)
             {
-                Console.WriteLine("boss unlock");
+                Console.WriteLine("invalid level");
             }
+
+            else if (level >=10)
+            {
+                 Console.WriteLine("boss unlock");
+            }
+
             else if (level >= 5)
             {
                 Console.WriteLine("door opne");
             }
+
             else
             {
                 Console.WriteLine("door stay shut");
             }
 
-            bool isPoisioned = true;
+            //bool isPoisioned = true;
 
-            if (isPoisioned == true)
-            {
-                Console.WriteLine("dead");
-            }
-            else if (!isPoisioned == false) 
-            {
-                Console.WriteLine("lived");
-            }
+            //if (isPoisioned == true)
+            //{
+            //    Console.WriteLine("dead");
+            //}
+            //else if (!isPoisioned == false) 
+            //{
+            //    Console.WriteLine("lived");
+            //}
 
         }
     }
