@@ -34,20 +34,29 @@ namespace Lab06
 
             Console.WriteLine("your level (1-99): ");
             bool inputLevel = int.TryParse(Console.ReadLine(), out int level);
+            bool hasKey = true;
 
             if (!inputLevel || level < 1 || level > 99)
             {
                 Console.WriteLine("invalid level");
             }
 
-            else if (level >=10)
+            else if (level >= 10 || hasKey)
             {
                  Console.WriteLine("boss unlock");
             }
 
             else if (level >= 5)
             {
-                Console.WriteLine("door opne");
+                if (hasKey)
+                {
+                    Console.WriteLine("boss unlock");
+                }
+                else
+                {
+                    Console.WriteLine("door lock");
+                }
+                
             }
 
             else
