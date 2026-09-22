@@ -15,12 +15,16 @@ namespace Lab06
             int lives = 5;
 
             // call "if" to check
-            if (lives == 0) //เงื่อนไขที่เป็น bool
+            if (lives <= 0) //เงื่อนไขที่เป็น bool
             {
                 Console.WriteLine("game over"); //ในปีกกาคือ code ที่จะรันเมื่อมัน true
             }
+            else
+            {
+                Console.WriteLine("pass");
+            }
 
-            //code บรรทัดต่อมาจะทำงานเมื่อ if เสร็จหรือ false
+            //code บรรทัดต่อมาจะทำงานเมื่อ :if" เสร็จหรือ false
             Console.WriteLine("continue code");
         }
     }
