@@ -32,37 +32,37 @@ namespace Lab06
 
             //int level = 11;
 
-            Console.WriteLine("your level (1-99): ");
-            bool inputLevel = int.TryParse(Console.ReadLine(), out int level);
-            bool hasKey = true;
+            //Console.WriteLine("your level (1-99): ");
+            //bool inputLevel = int.TryParse(Console.ReadLine(), out int level);
+            //bool hasKey = true;
 
-            if (!inputLevel || level < 1 || level > 99)
-            {
-                Console.WriteLine("invalid level");
-            }
+            //if (!inputLevel || level < 1 || level > 99)
+            //{
+            //    Console.WriteLine("invalid level");
+            //}
 
-            else if (level >= 10 || hasKey)
-            {
-                 Console.WriteLine("boss unlock");
-            }
+            //else if (level >= 10 || hasKey)
+            //{
+            //     Console.WriteLine("boss unlock");
+            //}
 
-            else if (level >= 5)
-            {
-                if (hasKey)
-                {
-                    Console.WriteLine("boss unlock");
-                }
-                else
-                {
-                    Console.WriteLine("door lock");
-                }
+            //else if (level >= 5)
+            //{
+            //    if (hasKey)
+            //    {
+            //        Console.WriteLine("boss unlock");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("door lock");
+            //    }
                 
-            }
+            //}
 
-            else
-            {
-                Console.WriteLine("door stay shut");
-            }
+            //else
+            //{
+            //    Console.WriteLine("door stay shut");
+            //}
 
             //bool isPoisioned = true;
 
@@ -74,6 +74,9 @@ namespace Lab06
             //{
             //    Console.WriteLine("lived");
             //}
+
+
+
 
         }
     }
