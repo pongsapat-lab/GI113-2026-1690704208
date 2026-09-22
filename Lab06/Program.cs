@@ -6,6 +6,8 @@
  * Course     : GI113 Computer Programming (GI)
  */
 
+using System.Reflection.Metadata;
+
 namespace Lab06
 {
     internal class Program
@@ -33,6 +35,10 @@ namespace Lab06
             if (level >=5)
             {
                 Console.WriteLine("door opne");
+            }
+            else if (level >=10)
+            {
+                Console.WriteLine("more door unlock");
             }
             else
             {
