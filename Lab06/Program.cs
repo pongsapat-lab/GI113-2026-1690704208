@@ -12,7 +12,7 @@ namespace Lab06
     {
         static void Main(string[] args)
         {
-            int lives = 8;
+            int lives = 5;
 
             // call "if" to check
             if (lives == 0) //เงื่อนไขที่เป็น bool
@@ -21,6 +21,7 @@ namespace Lab06
             }
 
             //code บรรทัดต่อมาจะทำงานเมื่อ if เสร็จหรือ false
+            Console.WriteLine("continue code");
         }
     }
 }
