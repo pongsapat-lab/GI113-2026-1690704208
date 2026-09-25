@@ -22,7 +22,18 @@ namespace Assignment2
             Console.WriteLine("Choose 'B' for breakdown"); //(Ore -> Ingot)
 
             bool inputAction = int.TryParse(Console.ReadLine(), out int choice);
+            Console.WriteLine("And how much do you like: ")
+            book inputValue = int.TryParse(Console.ReadLine(), out int value);
 
+            if (!inputAction || choice == s || choice == S || choice == b || choice == B)
+            {
+                Console.WriteLine("Invalid Input! Please try again!");
+            }
+
+            else if (choice == s || choice == S)
+            {
+                
+            }
         }
     }
 }
