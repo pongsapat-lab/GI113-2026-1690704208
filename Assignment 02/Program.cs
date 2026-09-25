@@ -18,7 +18,12 @@ namespace Assignment_02
             const double ironSalvage = 0.3;
             const int MaxBatch = 500;
 
-            Console.WriteLine("Welcome to the Forge");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("------Welcome to the Forge------");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine();
             Console.WriteLine("Please choose you action");
             Console.WriteLine("Choose 'S' for smelt"); //(Ore -> Ingot)
             Console.WriteLine("Choose 'B' for breakdown"); //(Ore -> Ingot)
@@ -28,16 +33,16 @@ namespace Assignment_02
             bool inputValue = int.TryParse(Console.ReadLine(), out int value); //จำนวนที่ใส่
 
 
-            if (inputValue || value > 0 || value <= MaxBatch)
+            if (inputValue && value > 0 && value <= MaxBatch) //ตรวจปรืมาณ
             {
 
-                if (inputAction && (choice == 's' || choice == 'S'))
+                if (inputAction && (choice == 's' || choice == 'S')) //ตรวจคำ
                 {
                     double result = value * ironSmelting;
                     Console.WriteLine($"{value:F2} Iron ore = {result:F2} Iron bar");
                 }
 
-                else if (inputAction && (choice == 'b' || choice == 'B'))
+                else if (inputAction && (choice == 'b' || choice == 'B')) //ตรวจคำ
                 {
                     double result = value / ironSalvage;
                     Console.WriteLine($"{value:F2} Iron bar = {result:F2} Iron ore");
