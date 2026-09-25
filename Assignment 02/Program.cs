@@ -13,10 +13,10 @@ namespace Assignment_02
         static void Main(string[] args)
         {
 
-            string itemName = "Iron";
-            double ironSmelting = 0.25;
-            double ironSalvage = 0.3;
-            int MaxBatch = 500;
+            const string itemName = "Iron";
+            const double ironSmelting = 0.25;
+            const double ironSalvage = 0.3;
+            const int MaxBatch = 500;
 
             Console.WriteLine("Welcome to the Forge");
             Console.WriteLine("Please choose you action");
@@ -27,15 +27,32 @@ namespace Assignment_02
             Console.WriteLine("And how much do you like: ");
             bool inputValue = int.TryParse(Console.ReadLine(), out int value); //จำนวนที่ใส่
 
+
             if (inputValue || value > 0 || value <= MaxBatch)
             {
 
-                if (inputAction || choice == 's' || choice == 'S')
+                if (inputAction && (choice == 's' || choice == 'S'))
                 {
                     double result = value * ironSmelting;
-                    Console.WriteLine($"{value} Iron ore = {result} Iron Bar");
+                    Console.WriteLine($"{value:F2} Iron ore = {result:F2} Iron bar");
                 }
-            }  
+
+                else if (inputAction && (choice == 'b' || choice == 'B'))
+                {
+                    double result = value / ironSalvage;
+                    Console.WriteLine($"{value:F2} Iron bar = {result:F2} Iron ore");
+                }
+
+                else
+                {
+                    Console.WriteLine("Invalid Action! Please try again!");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid value! Please try again!");
+            }
         }
     }
 }
