@@ -16,7 +16,7 @@ namespace Assignment_02
             string itemName = "Iron";
             double ironSmelting = 0.25;
             double ironSalvage = 0.3;
-            int MaxBatch = 1000;
+            int MaxBatch = 500;
 
             Console.WriteLine("Welcome to the Forge");
             Console.WriteLine("Please choose you action");
@@ -27,14 +27,15 @@ namespace Assignment_02
             Console.WriteLine("And how much do you like: ");
             bool inputValue = int.TryParse(Console.ReadLine(), out int value); //จำนวนที่ใส่
 
-            if (!inputAction || choice == 's' || choice == 'S' || choice == 'b' || choice == 'B')
-            {
-                Console.WriteLine("Invalid Input! Please try again!");
-            }
-            else if (choice == 's' || choice == 'S')
+            if (inputValue || value > 0 || value <= MaxBatch)
             {
 
-            }
+                if (inputAction || choice == 's' || choice == 'S')
+                {
+                    double result = value * ironSmelting;
+                    Console.WriteLine($"{value} Iron ore = {result} Iron Bar");
+                }
+            }  
         }
     }
 }
