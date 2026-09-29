@@ -11,15 +11,78 @@ namespace Lab07
     {
         static void Main(string[] args)
         {
-            int classID = 1;
+            //Part A
+            const int MonsterHp = 10;  //STEP 1
 
-            string weapon = classID switch
+            Console.Write("Monster Defense: ");
+            int.TryParse(Console.ReadLine(), out int monsterDefense);
+            Console.WriteLine($"A Slime appears! HP {MonsterHp}, DEF {monsterDefense}");
+
+            Console.WriteLine("=== BATTLE MENU ===");  //STEP 2
+            Console.WriteLine("1) Attack");
+            Console.WriteLine("2) Fire Magic");
+            Console.WriteLine("3) Defend");
+            Console.WriteLine("4) Run");
+            Console.Write("Choose (1-4): ");
+            int.TryParse(Console.ReadLine(), out int command);
+
+            switch (command)
             {
-                1 =>  "Sword",
-                2 =>  "Bow",
-                3 =>  "Magic",
-                _ =>  "Nothing"
+                case 1:
+                    Console.WriteLine("Hero swings the sword!");
+                    break;
+                case 2:
+                    Console.WriteLine("Hero casts Fire!");
+                    break;
+                case 3:
+                    Console.WriteLine("Hero raises the shield.");
+                    break;
+                case 4:
+                    Console.WriteLine("Hero looks for a way out...");
+                    break;
+                default:
+                    Console.WriteLine("Hero hesitates. Invalid command!");
+                    break;
+            }
+
+            int power = command switch //STEP 3
+            {
+                1 => 12,
+                2 => 18,
+                _ => 0
             };
+            int damage = Math.Max(0, power - monsterDefense);
+            Console.WriteLine($"Damage: {damage}");
+
+            string rating = damage switch  //STEP 4
+            {
+                >= 12 => "Critical hit!",
+                >= 5 => "Solid hit.",
+                > 0 => "Scratch.",
+                _ => "No damage."
+            };
+            Console.WriteLine($"Rating: {rating}");
+
+            string monsterStatus = damage >= MonsterHp ? "DEFEATED" : "still standing";  //STEP 5
+            Console.WriteLine($"Slime: {monsterStatus}");
+
+            Console.Write("Really run away? (y/n): "); //STEP 6
+            string answer = Console.ReadLine();
+
+            switch (answer)
+            {
+                case "y":
+                case "Y":
+                    Console.WriteLine("You escaped!");
+                    break;
+                case "n":
+                case "N":
+                    Console.WriteLine("You stay and fight.");
+                    break;
+                default:
+                    Console.WriteLine("Please type y or n.");
+                    break;
+            }
         }
     }
 }
