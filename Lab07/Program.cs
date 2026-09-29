@@ -11,7 +11,15 @@ namespace Lab07
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int classID = 1;
+
+            string weapon = classID switch
+            {
+                1 =>  "Sword",
+                2 =>  "Bow",
+                3 =>  "Magic",
+                _ =>  "Nothing"
+            };
         }
     }
 }
