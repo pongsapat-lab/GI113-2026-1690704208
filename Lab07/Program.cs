@@ -1,8 +1,8 @@
 ﻿/*
  * Student ID : 1690704208
- * Name       : Lab07
+ * Name       : Lab 7: Battle Command Menu
  * Section    : 129D
- * No.        : 
+ * No.        : 13
  * Course     : GI113 Computer Programming (GI)
  */
 
@@ -27,7 +27,8 @@ namespace Lab07
             Console.WriteLine("2) Fire Magic");
             Console.WriteLine("3) Defend");
             Console.WriteLine("4) Run");
-            Console.Write("Choose (1-4): ");
+            Console.WriteLine("5) Use Item");                            //Part B
+            Console.Write("Choose (1-5): ");                             //Part B
             int.TryParse(Console.ReadLine(), out int command);
 
             switch (command)
@@ -44,6 +45,9 @@ namespace Lab07
                 case 4:
                     Console.WriteLine("Hero looks for a way out...");
                     break;
+                case 5:                                                  // Part B
+                    Console.WriteLine("Hero use item to heal him self"); // Part B
+                    break;                                               // Part B
                 default:
                     Console.WriteLine("Hero hesitates. Invalid command!");
                     break;
@@ -55,6 +59,7 @@ namespace Lab07
             {
                 1 => 12,
                 2 => 18,
+                5 => 5,                                                  // Part B
                 _ => 0
             };
             int damage = Math.Max(0, power - monsterDefense);
